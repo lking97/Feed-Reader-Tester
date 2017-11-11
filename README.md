@@ -8,4 +8,4 @@ Testing the Feed Reader app using Javascript testing framework **Jasmine**.
 ### Instructions
 To view the feedreader website download all the files and open index.html in your browser.
 
-Alternatively, you can view the site on github pages by clicking or typing (link) in the URL bar.
+Alternatively, you can view the site on github pages by clicking or typing https://lking97.github.io/Feed-Reader-Tester/ in the URL bar.
