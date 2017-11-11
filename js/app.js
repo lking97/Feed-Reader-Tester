@@ -27,7 +27,7 @@ var allFeeds = [
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
  */
-function init() {
+function init() { "use strict";
     // Load the first feed we've defined (index of 0).
     loadFeed(0);
 }
@@ -40,7 +40,7 @@ function init() {
  * This function all supports a callback as the second parameter
  * which will be called after everything has run successfully.
  */
- function loadFeed(id, cb) {
+ function loadFeed(id, cb) { "use strict";
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
          feed = new google.feeds.Feed(feedURL);
@@ -90,7 +90,7 @@ google.setOnLoadCallback(init);
  * place our code in the $() function to ensure it doesn't execute
  * until the DOM is ready.
  */
-$(function() {
+$(function() { "use strict";
     var container = $('.feed'),
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
