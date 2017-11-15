@@ -44,17 +44,16 @@ $(function() {
     var menuIcon = document.querySelector(".menu-icon-link");
 
     // Make sure the menu is hidden initially
-    it("body has 'menu-hidden' initially", function() {
-      expect(body.className).toContain("menu-hidden");
+    it('menu is hidden by default', function() {
+      expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
     // Make sure menu icon toggles hide/show on clicking
-    it("body toggles the class 'menu-hidden' on clicking menu icon", function() {
-      menuIcon.click();
-      expect(body.className).not.toContain("menu-hidden");
-
-      menuIcon.click();
-      expect(body.className).toContain("menu-hidden");
+    it('menu changes visibility', function() {
+      $('menu-icon-link').click();
+      expect($('body').hasClass('menu-hidden')).toEqual(false);
+      $('menu-icon-link').click();
+      expect($('body').hasClass('menu-hidden')).toEqual(true);
     });
   });
 
